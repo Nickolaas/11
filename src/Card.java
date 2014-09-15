@@ -11,34 +11,34 @@ public class Card {
 	//Creating the private variables rank, suit, and points
 	private String rank;
 	private String suit;
-	private int points;
+	private int pointValue;
 	
 	//Constructor of card with input of rank, suit, and points
 	public Card(String _rank, String _suit, int _points){
 		//Assigning these values to the variables
 		this.rank = _rank;
 		this.suit = _suit;
-		this.points = _points;
+		this.pointValue = _points;
 	}
 	
 	//Accessors for rank, suit, and points
-	public String getRank() {
+	public String rank() {
 		return rank;
 	}
-	public String getSuit() {
+	public String suit() {
 		return suit;
 	}
-	public int getPoints() {
+	public int pointValue() {
 		return points;
 	}
 	
 	//An equals method to check if this card and another are the same
 	//Outputs either a boolean equaling true if the are the same, if not
 	//It will output a false
-	public boolean equals(Card _otherCard){
+	public boolean matches(Card _otherCard){
 		if (this.rank == _otherCard.rank){
 			if (this.suit == _otherCard.suit){
-				if(this.points == _otherCard.points){
+				if(this.points == _otherCard.pointValue){
 					return true;
 				}
 			}
@@ -54,6 +54,6 @@ public class Card {
 	// In brackets are the variables of that name
 	@Override
 	public String toString(){
-		return this.rank+" of "+this.suit+" (Point Value = "+this.points+")";
+		return this.rank+" of "+this.suit+" (Point Value = "+this.pointValue+")";
 	}
 }
