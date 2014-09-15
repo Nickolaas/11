@@ -29,7 +29,7 @@ public class Card {
 		return suit;
 	}
 	public int pointValue() {
-		return points;
+		return pointValue;
 	}
 	
 	//An equals method to check if this card and another are the same
@@ -38,7 +38,7 @@ public class Card {
 	public boolean matches(Card _otherCard){
 		if (this.rank == _otherCard.rank){
 			if (this.suit == _otherCard.suit){
-				if(this.points == _otherCard.pointValue){
+				if(this.pointValue == _otherCard.pointValue){
 					return true;
 				}
 			}
