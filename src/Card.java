@@ -52,6 +52,7 @@ public class Card {
 	// A toString() method that prints:
 	// [rank] of [suit] (Point Value = [Points]), where the things
 	// In brackets are the variables of that name
+	//@Override is important because classes normally contain a toString method
 	@Override
 	public String toString(){
 		return this.rank+" of "+this.suit+" (Point Value = "+this.pointValue+")";
